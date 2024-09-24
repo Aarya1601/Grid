@@ -1,0 +1,138 @@
+
+body {
+    padding: 10px;
+    background-color: #ccadcf;
+}
+
+.home p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 150%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr ;
+    justify-items: left;
+    gap: 20px;
+    background-color: #7e52b8;
+    
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #1f1c1ca9; 
+    font-size: 30px;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.product {
+    background-color: rgb(252, 237, 252);
+    border-radius: 20px;
+    transition: transform 0.3s;
+    padding: 50px;
+    text-align: center;
+    margin : 20px;
+
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.product h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin-bottom: 10px;
+    color: #3f3f3f;
+    font-size: 120%;
+}
+
+.product .price {
+    font-weight: bolder;
+    color: #721e25;
+    font-size: 150%;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product button {
+    background-color: #2b5a5d; 
+    color: #f0f7fa; 
+    padding: 10px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+footer {
+    background-color: #3d2b5d; 
+    padding: 0px 10px;
+    text-align: center;
+    font-size: 130%;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 40px;
+    font-size: 50px; 
+}
+
+@media (min-width: 1081px) {
+    .product-item {
+        flex: 1 1 calc(25% - 20px); 
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 1080px) {
+    .product-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 100%;
+    }
+}
