@@ -1,7 +1,17 @@
 
 body {
-    padding: 10px;
+    padding: 0px;
     background-color: #ccadcf;
+}
+
+
+header{
+    background-color: #b386be; 
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 .home p {
@@ -37,17 +47,32 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 20px; 
+    color: #0e0101;
 }
 
 nav a {
     text-decoration: none;
-    color: #1f1c1ca9; 
+    color: #0e0d0da9; 
     font-size: 30px;
 }
 
 .logo {
     font-size: 35px;
     font-weight: bold;
+    font-style: oblique;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: #ffdb58;
+    animation: slowflashAnimation 1s infinite;
+    transition: opacity 10s ease-in;
+}
+@keyframes slowflashAnimation {
+    0%, 100% {
+        opacity: 1; 
+    }
+    50% {
+        opacity: 0.1; 
+       
+    }
 }
 
 .product-grid {
@@ -102,6 +127,13 @@ nav a {
     border-radius: 5px;
     cursor: pointer;
     font-size: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #219e9e; 
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 footer {
@@ -114,7 +146,13 @@ footer {
 .social-media a {
     color: #fff;
     margin: 0 40px;
-    font-size: 50px; 
+    font-size: 50px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.2) rotate(10deg);
+    color: #ffdb58;
 }
 
 @media (min-width: 1081px) {
